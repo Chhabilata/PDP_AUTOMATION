@@ -6,6 +6,7 @@ import PreferencePage from "../Pages/PreferencesPage.js";
 import PrescriptionPage from "../Pages/PrescriptionPage.js";
 import PharmacyPage from "../Pages/PharmacyPage.js";
 import PlanSelectionPage from "../Pages/PlanSelectionPage.js";
+import EditRecommPage from "../Pages/EditRecommPage.js";
 
 
 describe ('Automation testing', ()=>{
@@ -19,6 +20,9 @@ loginpage.enterPassword("user123");
 loginpage.clickLoginBut();
 
 const landingpage=new LandingPage();
+//landingpage.clickRecomRadio();
+//landingpage.enterByEmail('chhab');
+//landingpage.clickCheckMark();
 landingpage.clickRecommendation();
 
 
@@ -64,12 +68,31 @@ planMA.clickPlan();
 planMA.clickDone();
 planMA.clickPlanCheckbox();
 planMA.clickMedicareBut();
-planMA.clickBackBut();
+//planMA.clickBackBut();
 //planMA.clicklongTermBut();
 planMA.clickAivanteLogo();
-planMA.clickEditButt();
-planMA.enterEditLifeExpectancy('85');
 
+
+const editrecommpage=new EditRecommPage();
+editrecommpage.clickEditButt();
+editrecommpage.enterEditLifeExpectancy('85');
+editrecommpage.enterEditZipcode('80112');
+editrecommpage.clickZipSearch();
+editrecommpage.enterEditContact('0123456789');
+editrecommpage.clickEditNextBut();
+editrecommpage.clickSearchPrefYes();
+editrecommpage.clickSearchprefNextbut();
+editrecommpage.clickEditDrug();
+editrecommpage.enterQuanty('60');
+editrecommpage.clickFrequency();
+editrecommpage.clickQuanty90();
+editrecommpage.clickUpdateDrug();
+//editrecommpage.clickCancelUpdateDrug();
+editrecommpage.clickdoneAdding();
+editrecommpage.clickPharmacyEdit();
+editrecommpage.clickNextEdit();
+editrecommpage.clickEdMA();
+editrecommpage.clickSelectMA3();
 
     })
 })

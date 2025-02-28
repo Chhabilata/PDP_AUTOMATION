@@ -9,10 +9,10 @@ nextButt=".selected-pharmacy > .button-wrapper";
     cy.get(this.backButPharmacy).click();
 }*/
 clickPharmacy(){
-    cy.get(this.selectPharmacy).first().wait(2000).click();
+    cy.get(this.selectPharmacy).first().wait(3000).click();
 }
 clickNext(){
-    cy.get(this.nextButt).wait(2000).click();
+    cy.get(this.nextButt).wait(3000).click();
 }
 
 }

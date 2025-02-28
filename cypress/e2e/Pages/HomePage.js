@@ -16,7 +16,7 @@ class HomePage{
     magiT16="#mat-option-19 > .mat-option-text";
     emailCom="#mat-input-9";
     contact="#mat-input-10";
-    nextButt=".form-wrapper > .mat-raised-button";
+    nextButt=".form-wrapper > .mat-raised-button"; 
 
     
          

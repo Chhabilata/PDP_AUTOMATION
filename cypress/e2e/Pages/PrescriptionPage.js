@@ -15,13 +15,13 @@ enterDrug(drugName){
     cy.get(".ant-select-item-option-active > .ant-select-item-option-content").click();
  }
 clickBrand(){
-    cy.get(this.brandDrug).click().wait(1000);
+    cy.get(this.brandDrug).click().wait(3000);
 }
 clickAddDrug(){
-    cy.get(this.addToMyDrugList).first().click().wait(1000);
+    cy.get(this.addToMyDrugList).first().click().wait(3000);
 }
 clickDoneAddingDrug(){
-    cy.get(this.doneAddingDrug).wait(1000).click();
+    cy.get(this.doneAddingDrug).wait(3000).click();
 }
 
 
