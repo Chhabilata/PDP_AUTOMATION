@@ -1,4 +1,6 @@
 class EditRecommPage{
+
+ 
 editRecommandtion=".inner-table > .mat-table > tbody > .highlight > .cdk-column-actions > :nth-child(1) > .mat-button-wrapper > .mat-icon";
 editLifeExpectancy="#mat-input-17";
 editZipcode="#mat-input-20";
@@ -64,6 +66,8 @@ clickUpdateDrug(){
 /*clickCancelUpdateDrug(){
     cy.get(this.cancelUpdateDrug).wait(2000).click();
 }*/
+
+
 clickdoneAdding(){
     cy.get(this.doneAddingdrugs).wait(2000).click();
 }
@@ -78,9 +82,7 @@ clickEdMA(){
 }
 clickSelectMA3(){
     cy.get(this.edSelectMA).wait(2000).click();
+
 }
-
-
-
 }
 export default EditRecommPage;

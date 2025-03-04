@@ -2,8 +2,8 @@ class LandingPage{
 
 //recommRadioBut="#mat-radio-3 > .mat-radio-label";//Prescription Radio Button
 //recommRadioBut="#mat-radio-2 > .mat-radio-label";//Recommendation Radio Button
-//filterByEmail="#mat-input-2";           
-//checkMark=".cdk-column-expand > .mat-focus-indicator > .mat-button-wrapper > .mat-icon";
+//filterByEmail="#mat-input-2";    //Email text field       
+//checkMark=".cdk-column-expand > .mat-focus-indicator > .mat-button-wrapper > .mat-icon";//
 recommendationBut=".button-container > .mat-focus-indicator > .mat-button-wrapper";
     
 /*clickRecomRadio(){

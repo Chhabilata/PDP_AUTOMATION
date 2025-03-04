@@ -8,7 +8,6 @@ import PharmacyPage from "../Pages/PharmacyPage.js";
 import PlanSelectionPage from "../Pages/PlanSelectionPage.js";
 import EditRecommPage from "../Pages/EditRecommPage.js";
 
-
 describe ('Automation testing', ()=>{
     it('test',()=>{
 
@@ -73,7 +72,10 @@ planMA.clickMedicareBut();
 planMA.clickAivanteLogo();
 
 
+
+
 const editrecommpage=new EditRecommPage();
+//editrecommpage.clickViewIcon();
 editrecommpage.clickEditButt();
 editrecommpage.enterEditLifeExpectancy('85');
 editrecommpage.enterEditZipcode('80112');
