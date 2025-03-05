@@ -37,7 +37,7 @@ clickMedicareBut(){
     cy.get(this.longTermBut).wait(2000).click();
 }*/
 clickAivanteLogo(){
-    cy.get(this.aivanteLogo).wait(5000).click();
+    cy.get(this.aivanteLogo).wait(6000).click();
 }
 
 
