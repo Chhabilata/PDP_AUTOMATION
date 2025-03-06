@@ -54,7 +54,8 @@ landingpage.clickSelectMA3();
 landingpage.clickRecomRadio();
 landingpage.enterByEmail('chhab');
 landingpage.clickCheckMark();
-//landingpage.clickView();
+landingpage.clickviewRecom();
+//landingpage.clickviewRecom();
 //landingpage.clickviewLowCost();
 //landingpage.clickviewProvider();
 //landingpage.clickviewMedicare();
@@ -76,6 +77,7 @@ landingpage.clickDeleteBut();
 //landingpage.clickPresRadioBut();
 
 //HOME PAGE
+/*
 const homepage=new HomePage();
 homepage.enterEmail('chhabi@gmail.com');
 homepage.clickHealthgrade();
@@ -102,9 +104,10 @@ homepage.clickmagi16();
 homepage.enterCommEmail('lata@gmail.com');
 homepage.enterContact('0123456788');
 homepage.clickNext();
-
+*/
 
 //PREFRENCES PAGE
+/*
 const preferencespage=new PreferencePage();
 //preferencespage.clickBackBut();
 preferencespage.clickPreferencesYes();
@@ -143,7 +146,7 @@ prescriptionpage.clickDoneAddDrug();
 */
 
 //PHARMACY PAGE
-
+/*
 const pharmacypage=new PharmacyPage();
 //pharmacypage.clickBackBut();
 pharmacypage.clickPharmacy();
@@ -215,6 +218,7 @@ pharmacypage.clickZipcoderadio()
     pharmacypage.clickNextBtn()
 */
 
+/*
 //MA PLAN
 const planMA=new PlanSelectionPage();
 planMA.clickMA();
@@ -225,6 +229,6 @@ planMA.clickMedicareBut();
 //planMA.clickBackBut();
 //planMA.clicklongTermBut();
 planMA.clickAivanteLogo();
-
+*/
 })
 })
