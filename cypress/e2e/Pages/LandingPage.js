@@ -107,26 +107,23 @@ clickRecommendation(){
 recommRadioBut="#mat-radio-2 > .mat-radio-label";//Recommendation Radio Button
 filterByEmail="#mat-input-2";    //Email text field 
 checkMark=".cdk-column-expand > .mat-focus-indicator > .mat-button-wrapper > .mat-icon";//
+viewRecom=".inner-table > .mat-table > tbody > :nth-child(1) > .cdk-column-actions > :nth-child(2) > .mat-button-wrapper > .mat-icon";
 viewRecom=".inner-table > .mat-table > tbody > :nth-child(1) > .cdk-column-actions > :nth-child(2) > .mat-button-wrapper > .mat-icon"; //View plan
-//viewLowCost=".view-button-container > :nth-child(1) > .mat-button-wrapper";
-//viewProvider=":nth-child(2) > .mat-button-wrapper";
-//viewProvider="div[class='view-button-container'] button:nth-child(1) span:nth-child(1)";//Selectorhub
-//viewMedicare=":nth-child(3) > .mat-button-wrapper";
-viewLongTerm=":nth-child(4) > .mat-button-wrapper";
-//backBut="button[class='mat-focus-indicator mat-raised-button mat-button-base mat-primary'] span[class='mat-button-wrapper']";//".button-container > :nth-child(1) > .mat-button-wrapper";
+viewLowCost=".view-button-container > :nth-child(1) > .mat-button-wrapper";
+viewProvider=".view-button-container > :nth-child(2)";
+viewMedicare=".view-button-container > :nth-child(3)";
+viewLongTerm=".view-button-container > :nth-child(4)";
+backBut="button[class='mat-focus-indicator mat-raised-button mat-button-base mat-primary'] span[class='mat-button-wrapper']";//".button-container > :nth-child(1) > .mat-button-wrapper";
 
-clickRecomRadio(){
-    cy.get(this.recommRadioBut).wait(3000).click();}
-enterByEmail(filterByEmail){
-    cy.get(this.filterByEmail).type(filterByEmail).wait(3000);}
-clickCheckMark(){
-    cy.get(this.checkMark).click();}
-clickView(){cy.get(this.viewRecom).wait(3000).click(); } 
-//clickviewLowCost(){cy.get(this.viewLowCost).wait(2000).click();   }
-//clickviewProvider(){cy.get(this.viewProvider).wait(2000).click();  }
-//clickviewMedicare(){cy.get(this.viewMedicare).wait(2000).click();  }
+clickRecomRadio(){cy.get(this.recommRadioBut).wait(3000).click();}
+enterByEmail(filterByEmail){cy.get(this.filterByEmail).type(filterByEmail).wait(3000);}
+clickCheckMark(){cy.get(this.checkMark).wait(2000).click();}
+clickviewRecom(){ cy.get(this.viewRecom).wait(2000).click()}
+clickviewLowCost(){cy.get(this.viewLowCost).wait(2000).click();   }
+clickviewProvider(){ cy.get(this.viewProvider).wait(2000).click() }
+clickviewMedicare(){cy.get(this.viewMedicare).wait(2000).click();  }
 clickviewLongTerm(){cy.get(this.viewLongTerm).wait(2000).click();  }
-//clickViewBackBut(){cy.get(this.backBut).wait(3000).click();} 
+clickViewBackBut(){cy.get(this.backBut).wait(3000).click();} 
 */
 
 

@@ -54,7 +54,8 @@ landingpage.clickSelectMA3();
 landingpage.clickRecomRadio();
 landingpage.enterByEmail('chhab');
 landingpage.clickCheckMark();
-//landingpage.clickView();
+landingpage.clickviewRecom();
+//landingpage.clickviewRecom();
 //landingpage.clickviewLowCost();
 //landingpage.clickviewProvider();
 //landingpage.clickviewMedicare();
@@ -76,6 +77,7 @@ landingpage.clickDeleteBut();
 //landingpage.clickPresRadioBut();
 
 //HOME PAGE
+/*
 const homepage=new HomePage();
 homepage.enterEmail('chhabi@gmail.com');
 homepage.clickHealthgrade();
@@ -102,9 +104,10 @@ homepage.clickmagi16();
 homepage.enterCommEmail('lata@gmail.com');
 homepage.enterContact('0123456788');
 homepage.clickNext();
-
+*/
 
 //PREFRENCES PAGE
+/*
 const preferencespage=new PreferencePage();
 //preferencespage.clickBackBut();
 preferencespage.clickPreferencesYes();
@@ -143,78 +146,79 @@ prescriptionpage.clickDoneAddDrug();
 */
 
 //PHARMACY PAGE
-
+/*
 const pharmacypage=new PharmacyPage();
 //pharmacypage.clickBackBut();
 pharmacypage.clickPharmacy();
 pharmacypage.clickNext();
 
 /*
-pharmacypg.clickZipcoderadio() 
+pharmacypage.clickZipcoderadio() 
     cy.wait(1000)
-    pharmacypg.enterZipcode('80922') 
+    pharmacypage.enterZipcode('80922') 
     cy.wait(1000)
-    pharmacypg.clickFindPahramcyinzipcode()
+    pharmacypage.clickFindPahramcyinzipcode()
     cy.wait(1000)
-    pharmacypg.enterZipcode('80924') 
+    pharmacypage.enterZipcode('80924') 
     cy.wait(1000)
-    pharmacypg.clickZiphistoryarrow()
+    pharmacypage.clickZiphistoryarrow()
     cy.wait(3000)
-    pharmacypg.selectZiphistoryZipcode()
+    pharmacypage.selectZiphistoryZipcode()
     cy.wait(3000)
-    pharmacypg.clickFindPahramcyinzipcode()
+    pharmacypage.clickFindPahramcyinzipcode()
     cy.wait(1000)
-    pharmacypg.enterDistance('15')
+    pharmacypage.enterDistance('15')
     cy.wait(1000)
-    pharmacypg.clickFindPahramcyinzipcode()
+    pharmacypage.clickFindPahramcyinzipcode()
     cy.wait(2000)
-    pharmacypg.clickNextpageBtn()
+    pharmacypage.clickNextpageBtn()
     cy.wait(1000)
-    pharmacypg.clickLastPageBtn()
+    pharmacypage.clickLastPageBtn()
     cy.wait(1000)
-    pharmacypg.clickPerivousPageBtn()
+    pharmacypage.clickPerivousPageBtn()
     cy.wait(1000)
     pharmacypg.clickFirstPageBtn()
     cy.wait(1000)
-    pharmacypg.selectPharmacy()
+    pharmacypage.selectPharmacy()
     cy.wait(1000)
-    pharmacypg.selectSecondPharmacy()
+    pharmacypage.selectSecondPharmacy()
     cy.wait(1000)
-    pharmacypg.itemPerPage()
+    pharmacypage.itemPerPage()
     cy.wait(1000)
-    pharmacypg.selectPharmacy()
+    pharmacypage.selectPharmacy()
     cy.wait(2000)
-    pharmacypg.selectSecondPharmacy()
+    pharmacypage.selectSecondPharmacy()
     cy.wait(2000)
-    pharmacypg.clickAddressradio()
+    pharmacypage.clickAddressradio()
     cy.wait(1000)
-    pharmacypg.enterAddress('6391 rollick drive,Colorado springs,CO,80924')
+    pharmacypage.enterAddress('6391 rollick drive,Colorado springs,CO,80924')
     cy.wait(6000)
-    pharmacypg.clickAddressFindPhramacy()
+    pharmacypage.clickAddressFindPhramacy()
     cy.wait(3000)
     pharmacypg.pickPharmacyfromAddress()
     cy.wait(2000)
-    pharmacypg.pickPharmacyfromAddress()
+    pharmacypage.pickPharmacyfromAddress()
     cy.wait(2000)
-    pharmacypg.enterPharmacyname('WALGREENS')
+    pharmacypage.enterPharmacyname('WALGREENS')
     cy.wait(6000)
-    pharmacypg.clickAddressFindPhramacy()
+    pharmacypage.clickAddressFindPhramacy()
     cy.wait(1000)
     pharmacypg. choosePharmacyaddress()
     cy.wait(2000)
-    pharmacypg.clickBackBtn()
+    pharmacypage.clickBackBtn()
     cy.wait(3000)
-    drugselect.clickDoneaddingdrug()
-    cy.wait(3000)
-    pharmacypg.clickAddressFindPhramacy()
+    //drugselect.clickDoneaddingdrug()
+    //cy.wait(3000)
+    pharmacypage.clickAddressFindPhramacy()
     cy.wait(1000)
-    pharmacypg.checkPharmacyagaininaddress()
+    pharmacypage.checkPharmacyagaininaddress()
     cy.wait(1000)
-    pharmacypg.clickGoogleBtn()
+    pharmacypage.clickGoogleBtn()
     cy.wait(1000)
-    pharmacypg.clickNextBtn()
+    pharmacypage.clickNextBtn()
 */
 
+/*
 //MA PLAN
 const planMA=new PlanSelectionPage();
 planMA.clickMA();
@@ -225,6 +229,6 @@ planMA.clickMedicareBut();
 //planMA.clickBackBut();
 //planMA.clicklongTermBut();
 planMA.clickAivanteLogo();
-
+*/
 })
 })
