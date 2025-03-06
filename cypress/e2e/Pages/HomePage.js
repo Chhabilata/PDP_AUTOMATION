@@ -42,7 +42,7 @@ class HomePage{
     enterLifeexpectancy(lifeExpectancy){
         cy.get(this.lifeExpectancy).clear().type(lifeExpectancy).wait(1000);
     }
-    clickDateOfBirth(){
+clickDateOfBirth(){
     cy.get(this.dateOfBirth).wait(2000).click();//Modified
 }
 clickYear(){

@@ -6,7 +6,6 @@ import PreferencePage from "../Pages/PreferencesPage.js";
 import PrescriptionPage from "../Pages/PrescriptionPage.js";
 import PharmacyPage from "../Pages/PharmacyPage.js";
 import PlanSelectionPage from "../Pages/PlanSelectionPage.js";
-//import EditRecommPage from "../Pages/EditRecommPage.js";
 
 
 describe ('Automation testing', ()=>{
@@ -71,20 +70,17 @@ landingpage.clickDeleteBut();
 //PRESCRIPTION RADIO BUTTON
 //landingpage.clickPresRadioBut();
 
-
+//HOME PAGE
 const homepage=new HomePage();
 homepage.enterEmail('chhabi@gmail.com');
 homepage.clickHealthgrade();
 homepage.clickSick();
 homepage.enterName('Chhabi');
 homepage.enterLifeexpectancy('80');
-
 homepage.clickDateOfBirth();
 homepage.clickYear();
 homepage.clickYearSelect();
 homepage.clickMonth();
-
-
 homepage.clickDobB();
 homepage.clickGender();
 homepage.clickMale();
@@ -102,35 +98,54 @@ homepage.enterCommEmail('lata@gmail.com');
 homepage.enterContact('0123456788');
 homepage.clickNext();
 
+
+//PREFRENCES PAGE
 const preferencespage=new PreferencePage();
 //preferencespage.clickBackBut();
 preferencespage.clickPreferencesYes();
 //preferencespage.clickPreferencesNo();
 preferencespage.clickNext();
 
+
+//PRESCRIPTIION PAGE
 const prescriptionpage=new PrescriptionPage();
 //prescriptionpage.SetGoBackPreferLink();
-prescriptionpage.enterDrug("eliq");
+prescriptionpage.enterDrug("eliq");  //BEGIN TYPING TO FIND & SELECT YOUR DRUG
 prescriptionpage.clickBrand();
 prescriptionpage.clickAddDrug();
+//prescriptionpage.clickSaveDrugList();  //SAVE DRUG LIST
+//prescriptionpage.clickEnterPrescListname('Drug');////Enter Prescription List Name
+//prescriptionpage.clickAddAnotherDrug(); //ADD ANOTHER DRUG
 prescriptionpage.clickDoneAddingDrug();
+//prescriptionpage.clickClearSearch();
+//prescriptionpage.clickCantFindDrug();
+//prescriptionpage.clickExistingDrigList();  //Select Prescription Drug from your Existing List field
+//prescriptionpage.clickDrugExistingList();  //select save drug list name
+//prescriptionpage.clickRemoveDrug();        //Remove drug
+//prescriptionpage.clickEditDrug();          //Edit drug
+//prescriptionpage.clickcancelUpdate();       //Cancel update drug
+//prescriptionpage.clickUpdateThisDrug();     //Update this drug
 
-
-/*prescriptionpage.clickDrugBrowse();
+/*
+prescriptionpage.clickDrugBrowse(); //Browse drugs A-Z
 cy.wait(1000)
 prescriptionpage.enterLetter("B");
 prescriptionpage.clickDrugFound();
 prescriptionpage.clickSelectDrug();
 prescriptionpage.clickAddDrug();
 prescriptionpage.clickAddToDrugList();
-prescriptionpage.clickDoneAddDrug();*/
+prescriptionpage.clickDoneAddDrug();
+*/
 
+//PHARMACY PAGE
 
 const pharmacypage=new PharmacyPage();
 //pharmacypage.clickBackBut();
 pharmacypage.clickPharmacy();
 pharmacypage.clickNext();
 
+
+//MA PLAN
 const planMA=new PlanSelectionPage();
 planMA.clickMA();
 planMA.clickPlan();
@@ -144,29 +159,5 @@ planMA.clickAivanteLogo();
 
 
 
-//const editrecommpage=new EditRecommPage();
-
-/*
-editrecommpage.clickEditButt();
-editrecommpage.enterEditLifeExpectancy('85');
-editrecommpage.enterEditZipcode('80112');
-editrecommpage.clickZipSearch();
-editrecommpage.enterEditContact('0123456789');
-editrecommpage.clickEditNextBut();
-editrecommpage.clickSearchPrefYes();
-editrecommpage.clickSearchprefNextbut();
-editrecommpage.clickEditDrug();
-editrecommpage.enterQuanty('60');
-editrecommpage.clickFrequency();
-editrecommpage.clickQuanty90();
-editrecommpage.clickUpdateDrug();
-//editrecommpage.clickCancelUpdateDrug();
-editrecommpage.clickdoneAdding();
-editrecommpage.clickPharmacyEdit();
-editrecommpage.clickNextEdit();
-editrecommpage.clickEdMA();
-editrecommpage.clickSelectMA3();
-*/
-
-    })
+})
 })
