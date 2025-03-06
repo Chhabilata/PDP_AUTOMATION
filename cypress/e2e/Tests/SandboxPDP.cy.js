@@ -18,6 +18,7 @@ loginpage.enterUsername("testuser@gmail.com");
 loginpage.enterPassword("user123");
 loginpage.clickLoginBut();
 
+
 const landingpage=new LandingPage();
 //CREAT RECOMMENDATION:
 landingpage.clickRecommendation();
@@ -53,8 +54,12 @@ landingpage.clickSelectMA3();
 landingpage.clickRecomRadio();
 landingpage.enterByEmail('chhab');
 landingpage.clickCheckMark();
-landingpage.clickView();
-landingpage.clickViewBackBut();
+//landingpage.clickView();
+//landingpage.clickviewLowCost();
+//landingpage.clickviewProvider();
+//landingpage.clickviewMedicare();
+//landingpage.clickviewLongTerm();
+//landingpage.clickViewBackBut();
 */
 
 
@@ -144,6 +149,71 @@ const pharmacypage=new PharmacyPage();
 pharmacypage.clickPharmacy();
 pharmacypage.clickNext();
 
+/*
+pharmacypg.clickZipcoderadio() 
+    cy.wait(1000)
+    pharmacypg.enterZipcode('80922') 
+    cy.wait(1000)
+    pharmacypg.clickFindPahramcyinzipcode()
+    cy.wait(1000)
+    pharmacypg.enterZipcode('80924') 
+    cy.wait(1000)
+    pharmacypg.clickZiphistoryarrow()
+    cy.wait(3000)
+    pharmacypg.selectZiphistoryZipcode()
+    cy.wait(3000)
+    pharmacypg.clickFindPahramcyinzipcode()
+    cy.wait(1000)
+    pharmacypg.enterDistance('15')
+    cy.wait(1000)
+    pharmacypg.clickFindPahramcyinzipcode()
+    cy.wait(2000)
+    pharmacypg.clickNextpageBtn()
+    cy.wait(1000)
+    pharmacypg.clickLastPageBtn()
+    cy.wait(1000)
+    pharmacypg.clickPerivousPageBtn()
+    cy.wait(1000)
+    pharmacypg.clickFirstPageBtn()
+    cy.wait(1000)
+    pharmacypg.selectPharmacy()
+    cy.wait(1000)
+    pharmacypg.selectSecondPharmacy()
+    cy.wait(1000)
+    pharmacypg.itemPerPage()
+    cy.wait(1000)
+    pharmacypg.selectPharmacy()
+    cy.wait(2000)
+    pharmacypg.selectSecondPharmacy()
+    cy.wait(2000)
+    pharmacypg.clickAddressradio()
+    cy.wait(1000)
+    pharmacypg.enterAddress('6391 rollick drive,Colorado springs,CO,80924')
+    cy.wait(6000)
+    pharmacypg.clickAddressFindPhramacy()
+    cy.wait(3000)
+    pharmacypg.pickPharmacyfromAddress()
+    cy.wait(2000)
+    pharmacypg.pickPharmacyfromAddress()
+    cy.wait(2000)
+    pharmacypg.enterPharmacyname('WALGREENS')
+    cy.wait(6000)
+    pharmacypg.clickAddressFindPhramacy()
+    cy.wait(1000)
+    pharmacypg. choosePharmacyaddress()
+    cy.wait(2000)
+    pharmacypg.clickBackBtn()
+    cy.wait(3000)
+    drugselect.clickDoneaddingdrug()
+    cy.wait(3000)
+    pharmacypg.clickAddressFindPhramacy()
+    cy.wait(1000)
+    pharmacypg.checkPharmacyagaininaddress()
+    cy.wait(1000)
+    pharmacypg.clickGoogleBtn()
+    cy.wait(1000)
+    pharmacypg.clickNextBtn()
+*/
 
 //MA PLAN
 const planMA=new PlanSelectionPage();
@@ -155,9 +225,6 @@ planMA.clickMedicareBut();
 //planMA.clickBackBut();
 //planMA.clicklongTermBut();
 planMA.clickAivanteLogo();
-
-
-
 
 })
 })

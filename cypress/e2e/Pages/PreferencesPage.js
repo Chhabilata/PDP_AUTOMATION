@@ -1,6 +1,9 @@
 class PreferencePage{
+
     //backBut="div[class='button-container pad'] button[class='mat-focus-indicator mat-raised-button mat-button-base mat-primary']";
     PreferencesYes="#mat-radio-11 > .mat-radio-label";//Search preference Yes
+    //PreferencesYes="label[for='mat-radio-26-input'] span[class='mat-radio-outer-circle']";//Search preference Yes
+
     //PreferencesNo="#mat-radio-12 > .mat-radio-label";//Search preference No
     nextBut=".preference-wrapper > .button-wrapper > .mat-focus-indicator";
 
@@ -10,7 +13,7 @@ class PreferencePage{
     cy.get(this.backBut).wait(3000).click();
  } */  
 clickPreferencesYes(){
-    cy.get(this.PreferencesYes).click();
+    cy.get(this.PreferencesYes).wait(2000).click();
 }
 /*clickPreferencesNo(){
     cy.get(this.PreferencesNo).click();
