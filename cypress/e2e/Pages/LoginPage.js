@@ -1,18 +1,19 @@
 class LoginPage {
 
-    username = "#mat-input-0";
-    password = "#mat-input-1";
-    loginbutton = ".mat-button-wrapper";
-
-    enterUsername(username) {
-        cy.get(this.username).type(username);
+    userNameEle="#mat-input-0";
+    passwordEle="#mat-input-1";
+    loginButtonEle=".mat-button-wrapper";
+    
+    setUserName(username){
+        cy.get(this.userNameEle).type(username);
     }
-    enterPassword(password) {
-        cy.get(this.password).type(password);
+    setPassword(password){
+        cy.get(this.passwordEle).type(password);
     }
-    clickLoginBut() {
-        cy.get(this.loginbutton).click();
+    clickLoginBtn(){
+        cy.get(this.loginButtonEle).click();
     }
-
+    
+    
 }
 export default LoginPage;
