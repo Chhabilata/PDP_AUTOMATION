@@ -1,11 +1,12 @@
 
 import LoginPage from "../Pages/LoginPage.js"
-import LandingPage from "../Pages/LandingPage";
-import HomePage from "../Pages/HomePage";
+import LandingPage from "../Pages/LandingPage.js";
+import HomePage from "../Pages/HomePage.js";
 import PreferencePage from "../Pages/PreferencesPage.js";
 import PrescriptionPage from "../Pages/PrescriptionPage.js";
 import PharmacyPage from "../Pages/PharmacyPage.js";
 import PlanSelectionPage from "../Pages/PlanSelectionPage.js";
+
 
 
 describe('Automation testing', () => {
@@ -14,9 +15,9 @@ describe('Automation testing', () => {
         cy.visit('http://169.61.105.110/medicareAdvantage_sandbox/landing-page ');
 
         const loginpage = new LoginPage();
-        loginpage.enterUsername("testuser@gmail.com");
-        loginpage.enterPassword("user123");
-        loginpage.clickLoginBut();
+        loginpage.setUserName("testuser@gmail.com");
+        loginpage.setPassword("user123");
+        loginpage.clickLoginBtn();
 
 
         //CREAT RECOMMENDATION:
