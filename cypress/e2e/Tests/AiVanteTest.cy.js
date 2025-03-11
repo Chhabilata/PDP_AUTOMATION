@@ -172,8 +172,8 @@ describe('Automation testing', () => {
         prescriptionpage.enterDrug("eliq");  //BEGIN TYPING TO FIND & SELECT YOUR DRUG
         prescriptionpage.clickBrand();
         prescriptionpage.clickAddDrug();
-        //prescriptionpage.clickSaveDrugList();  //SAVE DRUG LIST
-        //prescriptionpage.clickEnterPrescListname('Drug');////Enter Prescription List Name
+        prescriptionpage.clickSaveDrugList();  //SAVE DRUG LIST
+        //prescriptionpage.enterPrescListname('Drug');//Enter Prescription List Name
         //prescriptionpage.clickAddAnotherDrug(); //ADD ANOTHER DRUG
         prescriptionpage.clickDoneAddingDrug();
         //prescriptionpage.clickClearSearch();

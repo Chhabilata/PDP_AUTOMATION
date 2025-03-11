@@ -22,13 +22,15 @@ class LandingPage {
     clickCancelRecommendation() {
         cy.get(this.cancelRecommendation).wait(2000).click();
     }
+
+
     //EDITING PLAN:
     recommendationRadioBut = "#mat-radio-2 > .mat-radio-label";//Recommendation Radio Button
     filterByEmail = "#mat-input-2";    //Filter by recommendation email or name
     expandPlan=":nth-child(1) > .cdk-column-expand > .mat-focus-indicator > .mat-button-wrapper > .mat-icon";
     collapsesPlan = ".example-expanded-row > .cdk-column-expand > .mat-focus-indicator > .mat-button-wrapper > .mat-icon";
     //editRecommandtion=":nth-child(2) > .inner-table-wrap > .example-element-detail > .inner-table > .mat-table > tbody > :nth-child(1) > .cdk-column-actions > :nth-child(1)";
-    editRecommandtion=":nth-child(2) > .inner-table-wrap > .example-element-detail > .inner-table > .mat-table > tbody > :nth-child(1) > .cdk-column-actions > :nth-child(1)";
+    editRecommandtion="body > app-root:nth-child(1) > div:nth-child(1) > div:nth-child(2) > mat-sidenav-container:nth-child(1) > mat-sidenav-content:nth-child(5) > app-landing:nth-child(3) > div:nth-child(1) > app-recomndations:nth-child(3) > div:nth-child(1) > table:nth-child(2) > tbody:nth-child(2) > tr:nth-child(2) > td:nth-child(1) > div:nth-child(1) > div:nth-child(1) > table:nth-child(1) > tbody:nth-child(2) > tr:nth-child(1) > td:nth-child(3) > button:nth-child(1) > span:nth-child(1) > mat-icon:nth-child(1)";
     backBut = ".button-wrapper > .mat-focus-indicator";
     editHealthProfile = "#mat-select-value-3";
     editHealthProfile1 = "#mat-option-4 > .mat-option-text";
@@ -62,9 +64,9 @@ class LandingPage {
     searchPrefNo = "#mat-radio-12 > .mat-radio-label";
     searchPrefNextbut = ".preference-wrapper > .button-wrapper > .mat-focus-indicator";
     editDrug="body > app-root:nth-child(1) > div:nth-child(1) > div:nth-child(2) > mat-sidenav-container:nth-child(1) > mat-sidenav-content:nth-child(5) > app-prescriptions:nth-child(3) > div:nth-child(2) > app-selected-drug:nth-child(1) > div:nth-child(1) > div:nth-child(4) > div:nth-child(1) > nz-card:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(9) > a:nth-child(1) > u:nth-child(1)";
-    //editDrug ="body > app-root:nth-child(1) > div:nth-child(1) > div:nth-child(2) > mat-sidenav-container:nth-child(1) > mat-sidenav-content:nth-child(5) > app-prescriptions:nth-child(3) > div:nth-child(2) > app-selected-drug:nth-child(1) > div:nth-child(1) > div:nth-child(4) > div:nth-child(1) > nz-card:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(9) > a:nth-child(1) > u:nth-child(1)";
     editQuanty = "input[placeholder='Quantity']";
-    editFrequency = "nz-select-item[title='30 Days']";
+    editFrequency=".marginTop2Percent > .ant-form-item-control-input > .ant-form-item-control-input-content > .ant-select > .ant-select-selector > .ant-select-selection-item";
+    //editFrequency = "nz-select-item[title='30 Days']";
     enterFrequency60="nz-option-item[title='60 Days'] div[class='ant-select-item-option-content']"
     enterFrequency90 = "[title='90 Days'] > .ant-select-item-option-content"
     updateDrug = ".floatLeft > .ng-star-inserted";
@@ -72,10 +74,11 @@ class LandingPage {
     doneAddingdrugs = ".ng-star-inserted > .mat-focus-indicator";
     editAddPharmacy = "#mat-checkbox-2 > .mat-checkbox-layout >";
     pharmacyNextButt = ".selected-pharmacy > .button-wrapper";
-    editMAButt = ":nth-child(5) > .mat-focus-indicator > .mat-button-wrapper";//MA buttn
+    editMABut = ":nth-child(5) > .mat-focus-indicator > .mat-button-wrapper";//MA buttn
     editPlan="#mat-checkbox-14 > .mat-checkbox-layout > .mat-checkbox-inner-container";
-    selectMAPlan = "label[for='mat-checkbox-41-input'] span[class='mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin']";
-
+    doneBut=".button-container > .mat-focus-indicator";
+    //selectMAPlan = "label[for='mat-checkbox-41-input'] span[class='mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin']";
+    selectMAPlan=".mat-checkbox-inner-container"
     clickRecommendationRadioBut() {
         cy.get(this.recommendationRadioBut).click();
     }
@@ -213,11 +216,14 @@ clickdoneAdding() {
     clickPharmacyNextButt() {
         cy.get(this.pharmacyNextButt).click();
     }
-    clickEditMAButt() {
-        cy.get(this.editMAButt).click();
+    clickeditMABut(){
+        cy.get(this.editMABut).click();
     }
     clickEditPlan(){
         cy.get(this.editPlan).click();
+    }
+    clickMADoneBut(){
+        cy.get(this.doneBut).click();
     }
     clickSelectMAPlan() {
         cy.get(this.selectMAPlan).click();
@@ -226,7 +232,8 @@ clickdoneAdding() {
     recommRadioBut = "#mat-radio-2 > .mat-radio-label";//Recommendation Radio Button
     filterByEmail = "#mat-input-2";    //Email text field 
     checkMark = ".cdk-column-expand > .mat-focus-indicator > .mat-button-wrapper > .mat-icon";//Drop down arrow sign
-    viewRecom = ".inner-table > .mat-table > tbody > :nth-child(1) > .cdk-column-actions > :nth-child(2) > .mat-button-wrapper > .mat-icon"; //View plan
+    viewRecom = ".inner-table > .mat-table > tbody > :nth-child(1) > .cdk-column-actions > :nth-child(2)"; //View plan
+    viewBackbut=".button-container > :nth-child(1)";
     viewLowCost = ".view-button-container > :nth-child(1) > .mat-button-wrapper";
     viewProvider = ".view-button-container > :nth-child(2)";
     viewMedicare = ".view-button-container > :nth-child(3)";
@@ -237,6 +244,9 @@ clickdoneAdding() {
     enterByEmail(filterByEmail) { cy.get(this.filterByEmail).type(filterByEmail).wait(3000); }
     clickCheckMark() { cy.get(this.checkMark).wait(2000).click(); }
     clickviewRecom() { cy.get(this.viewRecom).wait(2000).click() }
+    clickviewBackbut(){
+        cy.get(this.viewBackbut).click();
+    }
     clickviewLowCost() { cy.get(this.viewLowCost).wait(2000).click(); }
     clickviewProvider() { cy.get(this.viewProvider).wait(2000).click() }
     clickviewMedicare() { cy.get(this.viewMedicare).wait(2000).click(); }

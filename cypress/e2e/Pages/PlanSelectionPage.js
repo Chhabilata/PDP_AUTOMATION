@@ -5,8 +5,8 @@ selectPlan = ".mat-checkbox-layout > .mat-checkbox-inner-container.first().click
 doneButt = ".button-container > .mat-focus-indicator";
 planCheckbox = ".mat-checkbox-inner-container";
 medicareBut = ".button-container > :nth-child(1) > .mat-button-wrapper";
-//backBut=".button-wrapper > :nth-child(1)"; 
-//longTermBut=".button-container > :nth-child(2) > .mat-button-wrapper";
+backBut=".button-wrapper > :nth-child(1)"; 
+longTermBut=".button-container > :nth-child(2) > .mat-button-wrapper";
 aivanteLogo = "img[src='assets/images/Aivante-logo.png']"; //Captured from cssSelector
 
 
@@ -14,9 +14,9 @@ aivanteLogo = "img[src='assets/images/Aivante-logo.png']"; //Captured from cssSe
 clickMA() {
 cy.get(this.selectMA).wait(2000).click();
 }
-/*clickPlan(){
+clickPlan(){
     cy.get(this.selectPlan).first().click();
-}*/
+}
 clickPlan() {
 cy.get('.mat-checkbox-layout > .mat-checkbox-inner-container').first().wait(3000).click({ force: true });
 }
@@ -30,22 +30,16 @@ cy.get(this.planCheckbox).wait(3000).click();
 clickMedicareBut() {
 cy.get(this.medicareBut).wait(3000).click();
 }
-/*clickBackBut(){
+clickBackBut(){
 cy.get(this.backBut).wait(3000).click();
 }
-/*clicklongTermBut(){
+clicklongTermBut(){
 cy.get(this.longTermBut).wait(2000).click();
-}*/
-clickAivanteLogo() {
-cy.get(this.aivanteLogo).wait(6000).click();
 }
-/*
-cy.get(this.selectPlan).then(($el) => {
-cy.log('Number of elements found: ${$el.length}');
-console.log($el.length, $el);
-});
-cy.get(this.selectPlan).last().click();
-*/
+clickAivanteLogo() {
+cy.get(this.aivanteLogo).wait(2000).click();
+}
+
 
 }
 export default PlanSelectionPage;

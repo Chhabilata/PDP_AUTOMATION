@@ -5,7 +5,11 @@ class HomePage {
 
     recommendationEmail = "#mat-input-3";
     healthProfile = ".mat-select-arrow.ng-tns-c216-10";
-    sickHealth = "#mat-option-7 > .mat-option-text";
+    bestHealth = "#mat-option-4 > .mat-option-text";
+    goodHealth = "#mat-option-5 > .mat-option-text";
+    moderateHealth = "#mat-option-6 > .mat-option-text";
+    poorHealth = "#mat-option-7 > .mat-option-text"
+    sickHealth = "#mat-option-8 > .mat-option-text";
     recommendationName = "#mat-input-4";
     lifeExpectancy = "#mat-input-5";
     dateOfBirth = "#mat-input-6";
@@ -23,7 +27,11 @@ class HomePage {
     zipCode = "#mat-input-8";
     search = ".mat-form-field-suffix > .mat-focus-indicator";
     magiTier = "#mat-select-value-11";
-    magiTier3 = "#mat-option-13 > .mat-option-text";//Magitier 3
+    magiTier1 = "#mat-option-11 > .mat-option-text";
+    magiTier2 = "#mat-option-12 > .mat-option-text";
+    magiTier3 = "#mat-option-13 > .mat-option-text";
+    magiTier4 = "#mat-option-14 > .mat-option-text";
+    magiTier5 = "#mat-option-15 > .mat-option-text";
     communicationEmail = "#mat-input-9";
     contact = "#mat-input-10";
     nextButt = ".form-wrapper > .mat-raised-button";
@@ -34,8 +42,20 @@ class HomePage {
     clickHealthProfile() {
         cy.get(this.healthProfile).click();
     }
-    clickSick() {
-        cy.get(this.sickHealth).wait(1000).click();
+    clickBestHealth() {
+        cy.get(this.bestHealth).click();
+    }
+    clickGoodHealth() {
+        cy.get(this.goodHealth).click();
+    }
+    clickModerateHealth() {
+        cy.get(this.moderateHealth).click();
+    }
+    clickPoorHealth() {
+        cy.get(this.poorHealth).click();
+    }
+    clickSickHealth() {
+        cy.get(this.sickHealth).click();
     }
     enterName(name) {
         cy.get(this.recommendationName).type(name);
@@ -61,27 +81,21 @@ class HomePage {
     clickMale() {
         cy.get(this.genderM).click();
     }
-
     clickFemale() {
         cy.gt(this.genderF).click();
     }
-
     clickTabaccoNo() {
         cy.get(this.tabaccoNo).click();
     }
-
     clickTabaccoYes() {
         cy.get(this.tabaccoYes).click();
     }
-
     clickTaxJoin() {
         cy.get(this.taxFilingJoin).click();
     }
-
     clickTaxIndiv() {
         cy.get(this.taxFilingIndiv).click();
     }
-
     enterStreet(street) {
         cy.get(this.street).type(street);
     }
@@ -94,13 +108,28 @@ class HomePage {
     clickMagiTier() {
         cy.get(this.magiTier).click();
     }
-    clickmagiTier3() {
+    clickMagiTier1() {
         cy.get(this.magiTier3).click().wait(1000);
     }
+    clickMagiTier2() {
+        cy.get(this.magiTier3).click().wait(1000);
+    }
+    clickMagiTier3() {
+        cy.get(this.magiTier3).click().wait(1000);
+    }
+    clickMagiTier4() {
+        cy.get(this.magiTier3).click().wait(1000);
+    }
+    clickMagiTier5() {
+        cy.get(this.magiTier3).click().wait(1000);
+    }
+
+
+
+
     entercommunicationEmail(communicationEmail) {
         cy.get(this.communicationEmail).type(communicationEmail);
     }
-
     enterContact(contact) {
         cy.get(this.contact).type(contact).wait(1000);
     }
