@@ -7,7 +7,7 @@ planCheckbox = ".mat-checkbox-inner-container";
 medicareBut = ".button-container > :nth-child(1) > .mat-button-wrapper";
 backBut=".button-wrapper > :nth-child(1)"; 
 longTermBut=".button-container > :nth-child(2) > .mat-button-wrapper";
-aivanteLogo = "img[src='assets/images/Aivante-logo.png']"; //Captured from cssSelector
+//aivanteLogo = "img[src='assets/images/Aivante-logo.png']"; //Captured from cssSelector
 
 
 
@@ -36,9 +36,9 @@ cy.get(this.backBut).wait(3000).click();
 clicklongTermBut(){
 cy.get(this.longTermBut).wait(2000).click();
 }
-clickAivanteLogo() {
+/*clickAivanteLogo() {
 cy.get(this.aivanteLogo).wait(2000).click();
-}
+}*/
 
 
 }
