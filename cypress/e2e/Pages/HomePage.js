@@ -23,16 +23,17 @@ AiVanteLogo="img[src='assets/images/Aivante-logo.png']";
     genderF="//span[@class='mat-option-text'][normalize-space()='Female']";  
     tabaccoNo = "#mat-radio-6 > .mat-radio-label"
     tabaccoYes = "#mat-radio-7 > .mat-radio-label";
+    tobaccoUserlink="mat-label > app-help-icon > .mat-focus-indicator > .mat-button-wrapper > .mat-icon";
     taxFilingJoin = "#mat-radio-8 > .mat-radio-label";//Tax filing jointly
     taxFilingIndiv = "#mat-radio-9 > .mat-radio-label";//Tax filing individual
     street = "#mat-input-7";
     zipCode = "#mat-input-8";
     search = ".mat-form-field-suffix > .mat-focus-indicator";
-    countyState ="//span[@class='mat-select-placeholder mat-select-min-line ng-tns-c216-35 ng-star-inserted']";
-    // countyState="#mat-select-value-7";
+    //countyState ="//span[@class='mat-select-placeholder mat-select-min-line ng-tns-c216-35 ng-star-inserted']";
+    countyState="#mat-select-value-7";
     city="#mat-select-value-9";
-    city1="//span[@class='mat-option-text'][normalize-space()='CASTLE PINES']"
-    city2 ="(//span[normalize-space()='CASTLE ROCK'])[1]";
+    city1="#mat-option-18 > .mat-option-text"
+    city2 ="#mat-option-19 > .mat-option-text";
     //city2="//span[normalize-space()='CASTLE ROCK']";
     //city2="#mat-option-19 > .mat-option-text";  //Castle Rock
     magiTier = "#mat-select-value-11";
@@ -113,6 +114,9 @@ enterRecommendationEmail(recommendationEmail) {
     clickTabaccoYes() {
         cy.get(this.tabaccoYes).click();
     }
+   clickTobaccoUserlink() {
+        cy.get('mat-label > app-help-icon > .mat-focus-indicator > .mat-button-wrapper > .mat-icon').click(); // Replace with the actual selector
+    }
     clickTaxJoin() {
         cy.get(this.taxFilingJoin).click();
     }
@@ -138,13 +142,13 @@ enterRecommendationEmail(recommendationEmail) {
           .click();
         }*/
        clickCity(){
-        cy.get(this.city).click();
+        cy.get('#mat-select-value-9').click({ force: true });
        }
         clickCity1(){
-            cy.xpath(this.city1).click();
+            cy.get(this.city1).click();
         }
     clickCity2(){
-        cy.xpath(this.city2).click();
+        cy.get(this.city2).click();
     }
     clickMagiTier() {
         cy.get(this.magiTier).click();
@@ -171,7 +175,8 @@ enterRecommendationEmail(recommendationEmail) {
         cy.get(this.contact).type(contact).wait(1000);
     }
     clickNext() {
-        cy.get(this.nextButt).click();
+        //cy.get(this.nextButt).click();
+        cy.get('.form-wrapper > .mat-raised-button').click({ force: true });
     }
 
     

@@ -33,111 +33,144 @@ describe('HomePage test', () => {
         homepage.clickHealthProfile();
         cy.log('health profile test case passed')
     });
-    it.only('TC-3, Verify the Health Profile MSG', () => {
+    it('TC-4, Verify the Health Profile msg link.', () => {
         const homepage = new HomePage();
         homepage.clickHealthProfileMSG();
-        cy.log('Health Profile MSG test case passed')
+        cy.log('Health Profile msg link test case passed')
     });
-    it('TC-3, Verify Best healthProfile', () => {
+    it('TC-5, Verify Best healthProfile', () => {
         const homepage = new HomePage();
         homepage.clickHealthProfile();
         homepage.clickBestHealth();
     });
-    it('TC-4, Verify Good healthProfile', () => {
+    it('TC-6, Verify Good healthProfile', () => {
         const homepage = new HomePage();
         homepage.clickHealthProfile();
         homepage.clickGoodHealth();
     });
-    it('TC-5, Verify Moderate healthProfile', () => {
+    it('TC-7, Verify Moderate healthProfile', () => {
         const homepage = new HomePage();
         homepage.clickHealthProfile();
         homepage.clickModerateHealth();
     });
-    it('TC-5, Verify Poor healthProfile', () => {
+    it('TC-8, Verify Poor healthProfile', () => {
         const homepage = new HomePage();
         homepage.clickHealthProfile();
         homepage.clickPoorHealth();
     });
-    it('TC-6, Verify Sick healthProfile', () => {
+    it('TC-9, Verify Sick healthProfile', () => {
         const homepage = new HomePage();
         homepage.clickHealthProfile();
         homepage.clickSickHealth();
     });
-    it('TC-7, Verify Recommendation Name', () => {
+    it('TC-10, Verify Recommendation Name', () => {
         const homepage = new HomePage();
         homepage.enterRecommName('Lata');
     });
 
-    it('TC-8, Verify life expectancy', () => {
+    it('TC-11, Verify life expectancy', () => {
         const homepage = new HomePage();
         homepage.enterLifeexpectancy('90');
     });
-    it.only('TC-8, Verify life expectancy MSG', () => {
+    it('TC-12, Verify life expectancy msg link.', () => {
         const homepage = new HomePage();
         homepage.clicklifeExpectancyMSG();
     });
-    
-    it('TC-9, Verify Date of birth', () => {
+
+    it('TC-13, Verify Date of birth', () => {
         const homepage = new HomePage();
         homepage.clickDateOfBirth();
     });
 
-    it('TC-11, Verify the year', () => {
+    it('TC-14, Verify the year', () => {
         const homepage = new HomePage();
         homepage.clickCalenderEle();
         homepage.clickYear();
         homepage.clickMonth();
     });
-    it('TC-14, Verify the male', () => {
+    it('TC-15, Verify the male', () => {
         const homepage = new HomePage();
         homepage.clickGender();
         cy.wait(2000);
         homepage.clickMale();
         cy.wait(2000);
     });
-    it('TC-15, Verify the female', () => {
+    it('TC-16, Verify the female', () => {
         const homepage = new HomePage();
         homepage.clickGender();
         cy.wait(2000);
         homepage.clickFemale();
     });
-    it('TC-16, Verify TabaccoNo', () => {
+    it('TC-17, Verify TabaccoNo', () => {
         const homepage = new HomePage();
         homepage.clickTabaccoNo();
     });
-    it('TC-17, Verify TabaccoYes', () => {
+    it('TC-18, Verify TabaccoYes', () => {
         const homepage = new HomePage();
         homepage.clickTabaccoYes();
     });
-    it('TC-19, Verify tax filing jointly', () => {
+    it('TC-19, Verify the Tabacco user link', () => {
+        const homepage = new HomePage();
+        homepage.clickTobaccoUserlink();
+    });
+    it('TC-20, Verify tax filing jointly', () => {
         const homepage = new HomePage();
         homepage.clickTaxJoin();
     });
-    it('TC-20, Verify tax filing individual', () => {
+    it('TC-21, Verify tax filing individual', () => {
         const homepage = new HomePage();
         homepage.clickTaxIndiv();
     });
-    it('TC-21, Verify the street', () => {
+    it('TC-22, Verify the street', () => {
         const homepage = new HomePage();
         homepage.enterStreet('Street');
     });
-    it('TC-22, Verify the Zip Code', () => {
+    it('TC-23, Verify the Zip Code', () => {
         const homepage = new HomePage();
-        homepage.enterZip('80122');
+        homepage.enterZip('80108');
+        cy.wait(2000);
     });
-    it('TC-23, Verify the Search icon for County, State and City', () => {
+    it('TC-24, Verify the Zip Code', () => {
         const homepage = new HomePage();
+        homepage.enterZip('80108');
+        cy.wait(2000);
         homepage.clickSearch();
+        cy.wait(2000);
     });
-
-    it('TC-25, Verify the city', () => {
+    it('TC-25, Verify the Zip Code', () => {
         const homepage = new HomePage();
+        homepage.enterZip('80108');
+        cy.wait(2000);
+        homepage.clickSearch();
+        cy.wait(2000);
+        homepage.clickCountyState();
+        cy.wait(2000);
+    });
+    it('TC-26, Verify the Zip Code', () => {
+        const homepage = new HomePage();
+        homepage.enterZip('80108');
+        cy.wait(2000);
+        homepage.clickSearch();
+        cy.wait(2000);
+        homepage.clickCountyState();
+        cy.wait(2000);
         homepage.clickCity();
+        cy.wait(2000);
+        homepage.clickCity1();
+        cy.wait(2000);
     });
-
-    it('TC-27, Verify the city options dropdown', () => {
+    it('TC-27, Verify the Zip Code', () => {
         const homepage = new HomePage();
+        homepage.enterZip('80108');
+        cy.wait(2000);
+        homepage.clickSearch();
+        cy.wait(2000);
+        homepage.clickCountyState();
+        cy.wait(2000);
+        homepage.clickCity();
+        cy.wait(2000);
         homepage.clickCity2();
+        cy.wait(2000);
     });
     it('TC-28, Verify the MagiTier', () => {
         const homepage = new HomePage();
@@ -170,21 +203,18 @@ describe('HomePage test', () => {
     });
     it('TC-34, Verify the Communication Email', () => {
         const homepage = new HomePage();
-        homepage.entercommunicationEmail();
+        homepage.entercommunicationEmail('abc@gmail.com');
     });
 
     it('TC-35, Verify the Contact', () => {
         const homepage = new HomePage();
-        homepage.enterContact();
+        homepage.enterContact('1234567890');
     });
 
     it('TC-36, Verify the Next button in the home page', () => {
         const homepage = new HomePage();
         homepage.clickNext();
     });
-
-
-
 
 
 
