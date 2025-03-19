@@ -1,7 +1,6 @@
 class LandingPage {
 
     //CREATE RECOMMENDATION:
-    
     createRecommendation="button[class='mat-focus-indicator mat-raised-button mat-button-base mat-primary ng-star-inserted'] span[class='mat-button-wrapper']";//cssselectorHub code
     createRecommandtionPlan = ":nth-child(3) > .cdk-column-actions > :nth-child(1)";
     deleteRecommendationIcon = ":nth-child(3) > .cdk-column-actions > :nth-child(2)";
@@ -34,7 +33,7 @@ class LandingPage {
     }
 
 
-    //EDITING PLAN:
+    
     recommendationRadioBut = "#mat-radio-2 > .mat-radio-label";//Recommendation Radio Button
     filterByEmail = "#mat-input-2";    //Filter by recommendation email or name
     expandPlan = ":nth-child(1) > .cdk-column-expand > .mat-focus-indicator > .mat-button-wrapper > .mat-icon";
@@ -75,7 +74,6 @@ class LandingPage {
     editDrug = "body > app-root:nth-child(1) > div:nth-child(1) > div:nth-child(2) > mat-sidenav-container:nth-child(1) > mat-sidenav-content:nth-child(5) > app-prescriptions:nth-child(3) > div:nth-child(2) > app-selected-drug:nth-child(1) > div:nth-child(1) > div:nth-child(4) > div:nth-child(1) > nz-card:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) > div:nth-child(9) > a:nth-child(1) > u:nth-child(1)";
     editQuanty = "input[placeholder='Quantity']";
     editFrequency = ".marginTop2Percent > .ant-form-item-control-input > .ant-form-item-control-input-content > .ant-select > .ant-select-selector > .ant-select-selection-item";
-    //editFrequency = "nz-select-item[title='30 Days']";
     enterFrequency60 = "nz-option-item[title='60 Days'] div[class='ant-select-item-option-content']"
     enterFrequency90 = "[title='90 Days'] > .ant-select-item-option-content"
     updateDrug = ".floatLeft > .ng-star-inserted";
@@ -86,19 +84,16 @@ class LandingPage {
     editMABut = ":nth-child(5) > .mat-focus-indicator > .mat-button-wrapper";//MA buttn
     editPlan = "#mat-checkbox-14 > .mat-checkbox-layout > .mat-checkbox-inner-container";
     doneBut = ".button-container > .mat-focus-indicator";
-    //selectMAPlan = "label[for='mat-checkbox-41-input'] span[class='mat-checkbox-inner-container mat-checkbox-inner-container-no-side-margin']";
     selectMAPlan = ".mat-checkbox-inner-container";
 
 
     clickRecommendationRadioBut() {
         cy.get(this.recommendationRadioBut).click();
     }
-
-    enterByEmail(filterByEmail) {
+enterByEmail(filterByEmail) {
         cy.get(this.filterByEmail).type(filterByEmail);
     }
-
-    clickExpandPlan() {
+clickExpandPlan() {
         cy.get(this.expandPlan).click();
     }
     clickCollapsesPlan() {

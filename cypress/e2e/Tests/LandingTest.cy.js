@@ -47,14 +47,14 @@ describe('HomePage test', () => {
         landingpage.clickCreateRecommandtionPlan();
         cy.wait(2000);
     });
-    /*it('test5 Verify delete Recommendation plan', () => { 
+    it.skip('test5 Verify delete Recommendation plan', () => { 
                    const landingpage = new LandingPage();
                    cy.wait(2000);
                    landingpage.clickDeleteRecommendationIcon();
                    cy.wait(2000);
                    landingpage.clickDeleteRecommandtionBut();
                    cy.wait(2000);
-                  });*/
+                  });
     it('test6 Verify cancel Recommendation plan', () => {
         const landingpage = new LandingPage();
         cy.wait(2000);
