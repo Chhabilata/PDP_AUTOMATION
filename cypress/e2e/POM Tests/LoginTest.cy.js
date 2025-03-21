@@ -2,8 +2,8 @@
 import LoginPage from "../Pages/LoginPage";
 
 
-describe('Automation testing', () => {
-    it('login Test', () => {
+describe('login Test', () => {
+    it(() => {
 
         cy.visit('http://169.61.105.110/medicareAdvantage_sandbox/landing-page ');
         cy.fixture('LoginFixture').then((data)=>{
@@ -12,6 +12,6 @@ describe('Automation testing', () => {
         loginpage.setPassword(data.password);
         loginpage.clickLoginBtn();
         });
-              
- } )
+    })
+    
 })

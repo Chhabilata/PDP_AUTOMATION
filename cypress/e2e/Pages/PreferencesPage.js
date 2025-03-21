@@ -1,24 +1,58 @@
 class PreferencePage {
+    backBut="div[class='button-container pad'] span[class='mat-button-wrapper']";
+    YesRadioDrugcost='#mat-radio-11 > .mat-radio-label > .mat-radio-container > .mat-radio-outer-circle';
+    NoRadioDrugcost='#mat-radio-12> .mat-radio-label > .mat-radio-container > .mat-radio-outer-circle';
+    NextPrefPage="/html/body/app-root/div/div[2]/mat-sidenav-container/mat-sidenav-content/app-preference/div[2]/div[2]/button/span[1]";
+    greatText="//h2[normalize-space()='Great!']";
+    Areyousuretext="//h2[normalize-space()='Are you sure?']"
 
-    backBut="div[class='button-container pad'] button[class='mat-focus-indicator mat-raised-button mat-button-base mat-primary']";
-    PreferencesYes = "#mat-radio-11 > .mat-radio-label";//Search preference Yes
-    PreferencesNo="#mat-radio-12 > .mat-radio-label";//Search preference No
-    nextBut = ".preference-wrapper > .button-wrapper > .mat-focus-indicator";
+
+    clickbackBut(){
+        cy.get(this.backBut).click();
+    }
+    clickyesRadioDrugCost(){
+        cy.get(this.YesRadioDrugcost).should('be.visible').click( { force: true});
+    }
+    clicknoRadioDrugCost(){
+        cy.get(this.NoRadioDrugcost).should('be.visible').click( { force: true});
+    }
+    clickNextPrefPage(){
+        cy.xpath(this.NextPrefPage, { timeout: 1000 })  // Extend the timeout to 10 seconds
+        .should('be.visible')
+        .click();
+    }
+    verifyGreatText() {
+        cy.xpath(this.greatText)  
+            .should('exist')         
+            .contains('Great!')      
+            .should('be.visible');   
+    }
+    verifyAreUSureText() {
+        cy.xpath(this.Areyousuretext)  
+        .debug() 
+            .should('exist')         
+            .contains('Are you sure?')      
+            .should('be.visible');   
+    }
+    verifyManagePrescriptionurl(){
+        cy.url().should('include', 'http://169.61.105.110/medicareAdvantage_sandbox/manage-prescriptions');  
+    }
+    verifyPlanSelectionUrl(){
+        cy.url().should('include', 'http://169.61.105.110/medicareAdvantage_sandbox/plan-selection');  
+    }
+    verifyPreferencePageUrl(){
+        cy.url().should('include', 'http://169.61.105.110/medicareAdvantage_sandbox/preferences');  
+    }
+    verifyMedicarePageUrl(){
+        cy.url().should('include', 'http://169.61.105.110/medicareAdvantage_sandbox/plan-selection/plan-list/MEDICARE');  
+    }
+    verifyPdpPageUrl(){
+        cy.url().should('include', 'http://169.61.105.110/medicareAdvantage_sandbox/plan-selection/plan-list/PDP');  
+    }
+    verifyHomePageUrl(){
+        cy.url().should('include','http://169.61.105.110/medicareAdvantage_sandbox/home')
+    }
     
-    clickBackBut(){
-    cy.get(this.backBut).wait(2000).click();
-    } 
-    clickPreferencesYes() {
-    cy.get(this.PreferencesYes).wait(2000).click();
-    }
-    clickPreferencesNo(){
-    cy.get(this.PreferencesNo).click();
-    }
-    clickNext() {
-    cy.get(this.nextBut).click();
     }
     
-    }
     export default PreferencePage;
-    
-    

@@ -124,10 +124,10 @@ enterRecommendationEmail(recommendationEmail) {
         cy.get(this.taxFilingIndiv).click();
     }
     enterStreet(street) {
-        cy.get(this.street).type(street);
+        cy.get(this.street).clear().type(street);
     }
     enterZip(zipCode) {
-        cy.get(this.zipCode).type(zipCode).wait(1000);
+        cy.get(this.zipCode).clear().type(zipCode).click();
     }
     clickSearch() {
         cy.get(this.search).click();
@@ -135,13 +135,7 @@ enterRecommendationEmail(recommendationEmail) {
     clickCountyState(){
         cy.get(this.countyState).click();
     }
-    /*clickCity(){
-        cy.get('.mat-select-trigger').click();  // Open dropdown
-        cy.get('#mat-select-value-9')
-          .should('be.visible')
-          .click();
-        }*/
-       clickCity(){
+    clickCity(){
         cy.get('#mat-select-value-9').click({ force: true });
        }
         clickCity1(){
@@ -168,12 +162,13 @@ enterRecommendationEmail(recommendationEmail) {
     clickMagiTier5() {
         cy.get(this.magiTier3).click().wait(1000);
     }
- entercommunicationEmail(communicationEmail) {
-        cy.get(this.communicationEmail).type(communicationEmail);
+entercommunicationEmail(communicationEmail) {
+cy.get(this.communicationEmail).type().click();
     }
     enterContact(contact) {
-        cy.get(this.contact).type(contact).wait(1000);
+        cy.get(this.contact).type(contact).click();
     }
+    
     clickNext() {
         //cy.get(this.nextButt).click();
         cy.get('.form-wrapper > .mat-raised-button').click({ force: true });
